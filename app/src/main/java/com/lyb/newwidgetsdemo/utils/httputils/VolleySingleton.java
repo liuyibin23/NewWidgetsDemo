@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lyb.newwidgetsdemo.utils;
+package com.lyb.newwidgetsdemo.utils.httputils;
 
 import android.content.Context;
 

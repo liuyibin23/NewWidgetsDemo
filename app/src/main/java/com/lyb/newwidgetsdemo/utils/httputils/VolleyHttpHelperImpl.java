@@ -6,7 +6,6 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.lyb.newwidgetsdemo.utils.VolleySingleton;
 
 /**
  * Created by Administrator on 2017/3/26.

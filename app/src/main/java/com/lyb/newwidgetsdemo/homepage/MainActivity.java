@@ -1,4 +1,4 @@
-package com.lyb.newwidgetsdemo;
+package com.lyb.newwidgetsdemo.homepage;
 
 import android.content.Context;
 import android.net.Uri;
@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lyb.newwidgetsdemo.R;
 import com.lyb.newwidgetsdemo.adapter.MyViewPagerAdapter;
 
 import java.util.List;
@@ -23,6 +24,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
     implements ViewPager.OnPageChangeListener{
 
+    private ZhihuDailyPresenter mZhihuDailyPresenter;
+    private ZhihuDailyFragment mZhihuDailyFragment;
 
     private DrawerLayout mDrawerLayout;
     private CoordinatorLayout mCoordinatorLayout;
@@ -42,6 +45,10 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mZhihuDailyFragment = ZhihuDailyFragment.newInstance();
+        mZhihuDailyPresenter = new ZhihuDailyPresenter(this,mZhihuDailyFragment);
+
         initView();
         initData();
         configViews();
@@ -59,7 +66,7 @@ public class MainActivity extends AppCompatActivity
 
     private void configViews() {
 
-        mViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(),mTitles);
+        mViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(),mTitles,mZhihuDailyFragment);
         mViewPager.setAdapter(mViewPagerAdapter);
         // 设置ViewPager最大缓存的页面个数
         mViewPager.setOffscreenPageLimit(5);

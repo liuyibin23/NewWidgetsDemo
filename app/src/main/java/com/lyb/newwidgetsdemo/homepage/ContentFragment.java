@@ -1,4 +1,4 @@
-package com.lyb.newwidgetsdemo;
+package com.lyb.newwidgetsdemo.homepage;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.lyb.newwidgetsdemo.R;
 import com.lyb.newwidgetsdemo.adapter.MyRecyclerViewAdapter;
 
 /**

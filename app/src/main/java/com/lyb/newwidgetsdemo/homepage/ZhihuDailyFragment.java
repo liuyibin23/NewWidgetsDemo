@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lyb.newwidgetsdemo.R;
+import com.lyb.newwidgetsdemo.adapter.DividerItemDecoration;
+import com.lyb.newwidgetsdemo.adapter.SpacesItemDecoration;
 import com.lyb.newwidgetsdemo.adapter.ZhihuDailyNewsAdapter;
 import com.lyb.newwidgetsdemo.model.ZhihuDailyNews;
 
@@ -47,6 +49,7 @@ public class ZhihuDailyFragment extends Fragment implements ZhihuDailyContract.V
     public void initViews(View view) {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.fragmentlist_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST));
     }
 
     @Override

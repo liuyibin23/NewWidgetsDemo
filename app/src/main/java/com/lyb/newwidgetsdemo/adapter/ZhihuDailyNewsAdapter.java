@@ -48,7 +48,7 @@ public class ZhihuDailyNewsAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 ((NormalViewHolder) holder).itemImg.setImageResource(R.drawable.placeholder);
             }else{
                 Glide.with(mContext)
-                        .load(item.getImages())
+                        .load(item.getImages().get(0))
                         .asBitmap()
                         .placeholder(R.drawable.placeholder)
                         .diskCacheStrategy(DiskCacheStrategy.SOURCE)

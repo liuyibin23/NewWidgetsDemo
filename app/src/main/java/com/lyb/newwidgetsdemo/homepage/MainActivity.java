@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
         mViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(),mTitles,mZhihuDailyFragment);
         mViewPager.setAdapter(mViewPagerAdapter);
         // 设置ViewPager最大缓存的页面个数
-        mViewPager.setOffscreenPageLimit(5);
+        mViewPager.setOffscreenPageLimit(3);
         mViewPager.setOnPageChangeListener(this);
 
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
